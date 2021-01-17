@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>WhenShouldIGo</title>
+<link href={{ url_for('static', filename="inputstyle.css") }} rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=insertkey&libraries=places"></script>
+</head>
+<body>
+    <header>   
+            <h2 id="header-text">When should I go?</h2>
+            <form id="location-submit" method="POST" action="{{ url_for('output')}}">
+                <input name="location" type="text" id="autocomplete" size="50"/>
+                <button>Submit</button>
+            </form>
+    </header>
+</body>
+<script>
+    var input = document.getElementById('autocomplete');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+    google.maps.event.addListener(autocomplete, 'place_changed', function(){
+       var place = autocomplete.getPlace();
+    })
+  </script>
+</html>
+
+

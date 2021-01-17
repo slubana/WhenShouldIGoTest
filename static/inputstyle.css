@@ -1,0 +1,33 @@
+*
+{
+    margin:0 ;
+    padding:0 ;
+}
+
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-image: url(city.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#header-text{
+    background-color: rgba(116, 116, 116, 0.925);
+    color: white;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 20px;
+    padding-right: 20px;
+} 
+
+#location-submit{
+    position: absolute;
+    top: 54%;
+}
